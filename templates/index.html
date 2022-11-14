@@ -6,9 +6,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
 </head>
 
 <body>
+    <h1>Post Create Bootstrap</h1>
+    <form action="/create" method="post">
+        <div class="form-group">
+            <label for="name">名前</label>
+            <input type="text" class="form-control" id="name" aria-describedby="nameHelp" placeholder="Enter name">
+        </div>
+        <div class="form-group">
+            <label for="title">タイトル</label>
+            <input type="text" class="form-control" id="title" aria-describedby="titleHelp" placeholder="Enter title">
+        </div>
+        <div class="form-group">
+            <label for="body">タイトル</label>
+            <input type="text" class="form-control" id="body" aria-describedby="bodyHelp" placeholder="Enter body">
+        </div>
+        <button type="submit" class="btn btn-primary">登録</button>
+    </form>
+    <hr>
     <h1>Post Create</h1>
     <form action="/create" method="post">
         <p>名前 <input type="text" name="postName" id=""></p>
@@ -16,6 +38,7 @@
         <p>内容<input type="text" name="postBody" id=""></p>
         <p><input type="submit" value="登録"></p>
     </form>
+    <hr>
     {% for p in posts %}
     <p>{{ p.name }} {{ p.title }} {{ p.body }}</p>
     {% endfor %}
